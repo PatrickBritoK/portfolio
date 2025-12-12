@@ -1,0 +1,41 @@
+.timeline {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #333;
+  margin-top: 40px;
+}
+
+.timeline-item {
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border-radius: 50%;
+  position: absolute;
+  left: -8px;
+  top: 4px;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.6);
+}
+
+.timeline-content h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.role {
+  color: #7aa2f7;
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.desc {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #cccccc;
+  line-height: 1.5;
+}
