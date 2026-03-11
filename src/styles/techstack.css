@@ -1,24 +1,23 @@
 .stack-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-  gap: 20px;
-  justify-content: center;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 24px;
 }
 
 .stack-item {
-  width: 150px;
-  border: 1px solid #333;
+  background: #1e293b;
   padding: 20px;
-  text-align: center;
   border-radius: 8px;
-  transition: 0.2s ease;
+  text-align: center;
+  transition: 0.2s;
 }
 
 .stack-item:hover {
-  border-color: #2563eb;
+  transform: translateY(-3px);
+  background: #263449;
 }
 
-.icon {
-  font-size: 26px;
+.stack-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
 }

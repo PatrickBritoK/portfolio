@@ -1,57 +1,44 @@
 .projects-grid {
   display: grid;
-  gap: 30px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
 }
 
 .project-card {
-  background: #151515;
-  padding: 25px;
+  background: #1e293b;
+  padding: 24px;
   border-radius: 10px;
-  border: 1px solid #222;
-  transition: 0.25s ease;
-}
-
-.project-card:hover {
-  border-color: #2563eb;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .project-card h3 {
-  font-size: 24px;
+  font-size: 1.3rem;
 }
 
 .description {
-  margin-top: 10px;
-  font-size: 15px;
-  color: #cccccc;
+  color: #94a3b8;
 }
 
 .tech-list {
-  margin-top: 15px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
 .tech {
-  background: #222;
-  padding: 6px 12px;
-  border-radius: 5px;
-  font-size: 13px;
-  color: #e2e2e2;
+  background: #334155;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
 }
 
 .project-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 10px 18px;
-  background: #2563eb;
-  text-decoration: none;
-  color: white;
-  border-radius: 6px;
-  transition: 0.2s;
+  margin-top: 10px;
+  color: #60a5fa;
 }
 
 .project-btn:hover {
-  background: #1d4db6;
+  text-decoration: underline;
 }

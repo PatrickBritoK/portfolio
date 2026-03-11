@@ -7,22 +7,22 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "Envius",
+    name: "",
     description:
-      "SaaS de agendamento automático de mensagens para WhatsApp usando Go, Node e n8n.",
-    link: "https://envyus.com.br",
-    techs: ["Go", "Node.js", "Vue", "PostgreSQL"],
+      "",
+    link: "",
+    techs: [""],
   },
   {
-    name: "OrceJá",
+    name: "",
     description:
-      "Sistema de orçamento para marmorarias com cálculo automático por m² e painel de clientes.",
-    techs: ["Go", "React", "PostgreSQL"],
+      "",
+    techs: [""],
   },
   {
-    name: "TVCorp",
+    name: "",
     description:
-      "Sistema de TV corporativa com layout dinâmico para barbearias e comércio local.",
-    techs: ["Vue", "Node.js"],
+      "",
+    techs: [""],
   },
 ];
