@@ -12,8 +12,12 @@ export default function TechStack() {
             const Icon = t.icon;
 
             return (
-              <div key={t.name} className="stack-item">
-                <Icon className="stack-icon" style={{ color: t.color }}/>
+              <div
+                key={t.name}
+                className="stack-item"
+                style={{ "--tech-color": t.color } as React.CSSProperties}
+              >
+                <Icon className="stack-icon" style={{ color: t.color }} />
                 <p>{t.name}</p>
               </div>
             );

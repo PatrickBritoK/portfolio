@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { education } from "../data/education";
+import { useLanguage } from "../context/LanguageContext";
 import "../styles/education.css";
 
 export default function Education() {
+  const { translate } = useLanguage();
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggle = (index: number) => {
@@ -16,19 +17,19 @@ export default function Education() {
   return (
     <section>
       <div className="section-container">
-        <h2>Formação</h2>
+        <h2>{translate.education.title}</h2>
 
         <div className="education-grid">
-          {education.map((item, index) => {
+          {translate.education.items.map((item, index) => {
             const isOpen = openItems.includes(index);
 
             return (
               <div key={index} className="education-card">
                 <h3>{item.course}</h3>
 
-                {item.institution && (
+                {/* {item.institution && (
                   <p className="institution">{item.institution}</p>
-                )}
+                )} */}
 
                 <p className="period">{item.period}</p>
 
@@ -38,7 +39,9 @@ export default function Education() {
                     onClick={() => toggle(index)}
                     type="button"
                   >
-                    {isOpen ? "Ocultar detalhes" : "Ver detalhes"}
+                    {isOpen
+                      ? translate.education.hideDetails
+                      : translate.education.showDetails}
                   </button>
                 )}
 
@@ -47,7 +50,9 @@ export default function Education() {
                     {item.subjects.map((subject) => (
                       <div key={subject.name} className="subject-item">
                         <span className="subject-name">{subject.name}</span>
-                        <span className="subject-hours">{subject.hours}h</span>
+                        <span className="subject-hours">
+                          {subject.hours}h
+                        </span>
                       </div>
                     ))}
                   </div>

@@ -11,6 +11,7 @@ import {
   SiDocker,
   SiAmazon,
   SiGit,
+  SiOracle,
 } from "react-icons/si";
 
 export interface TechItem {
@@ -26,7 +27,7 @@ export const techstack: TechItem[] = [
   { name: "Vue.js", icon: SiVuedotjs, color: "#41B883" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
-  { name: "Oracle", icon: SiOpenjdk, color: "#F80000" },
+  { name: "Oracle", icon: SiOracle, color: "#F80000" },
   { name: "MySQL", icon: SiMysql, color: "#4479A1" },
   { name: "Docker", icon: SiDocker, color: "#2496ED" },
   { name: "AWS", icon: SiAmazon, color: "#FF9900" },

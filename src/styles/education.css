@@ -1,8 +1,6 @@
 .education-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  columns: 2;
   gap: 24px;
-  align-items: start;
 }
 
 .education-card {
@@ -10,16 +8,18 @@
   padding: 22px;
   border-radius: 10px;
   transition: 0.2s;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 6px;
-  align-self: start;
+  width: 100%;
+  margin-bottom: 24px;
+  break-inside: avoid;
 }
 
 .education-card:hover {
   transform: translateY(-4px);
   background: #263449;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .education-card h3 {
@@ -74,4 +74,10 @@
 .subject-hours {
   color: #64748b;
   white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .education-grid {
+    columns: 1;
+  }
 }

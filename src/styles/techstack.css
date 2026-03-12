@@ -11,23 +11,26 @@
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  transition: 0.2s;
+  transition: 0.25s;
   width: 140px;
   min-height: 110px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 2px solid transparent;
 }
 
 .stack-item:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   background: #263449;
+  border-color: var(--tech-color);
 }
 
 .stack-icon {
   font-size: 2rem;
   margin-bottom: 8px;
+  transition: 0.2s;
 }
 
 .stack-item:hover .stack-icon {
