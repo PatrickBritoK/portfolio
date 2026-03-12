@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
+  align-items: start;
 }
 
 .education-card {
@@ -12,6 +13,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
+  align-self: start;
 }
 
 .education-card:hover {
@@ -32,4 +34,44 @@
 .period {
   font-size: 0.9rem;
   color: #64748b;
+}
+
+.details-btn {
+  margin-top: 8px;
+  background: transparent;
+  border: none;
+  color: #60a5fa;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 0;
+}
+
+.details-btn:hover {
+  text-decoration: underline;
+}
+
+.subjects {
+  margin-top: 14px;
+  border-top: 1px solid #334155;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subject-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+
+.subject-name {
+  color: #cbd5e1;
+}
+
+.subject-hours {
+  color: #64748b;
+  white-space: nowrap;
 }

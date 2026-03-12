@@ -1,7 +1,9 @@
 .stack-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 24px;
+  margin: 0 auto;
 }
 
 .stack-item {
@@ -10,6 +12,12 @@
   border-radius: 8px;
   text-align: center;
   transition: 0.2s;
+  width: 140px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .stack-item:hover {
@@ -20,4 +28,8 @@
 .stack-icon {
   font-size: 2rem;
   margin-bottom: 8px;
+}
+
+.stack-item:hover .stack-icon {
+  transform: scale(1.2);
 }
