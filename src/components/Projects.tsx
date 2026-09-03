@@ -1,34 +1,46 @@
 import { projects } from "../data/projects";
+import { useLanguage } from "../context/useLanguage";
 import "../styles/projects.css";
 
 export default function Projects() {
+  const { translate } = useLanguage();
+
   return (
-    <section>
+    <section id="projetos">
       <div className="section-container">
-        <h2>Projetos em Destaque</h2>
+        <h2>{translate.projects.title}</h2>
 
         <div className="projects-grid">
-          {projects.map((p) => (
-            <div key={p.name} className="project-card">
-              <h3>{p.name}</h3>
+          {projects.map((project, index) => {
+            const content = translate.projects.items[index];
 
-              <p className="description">{p.description}</p>
+            return (
+              <article key={project.id} className="project-card">
+                <h3>{content.name}</h3>
 
-              <div className="tech-list">
-                {p.techs.map((tech) => (
-                  <span key={tech} className="tech">
-                    {tech}
-                  </span>
-                ))}
-              </div>
+                <p className="description">{content.description}</p>
 
-              {p.link && (
-                <a href={p.link} target="_blank" rel="noreferrer" className="project-btn">
-                  Ver Projeto
-                </a>
-              )}
-            </div>
-          ))}
+                <div className="tech-list">
+                  {project.techs.map((tech) => (
+                    <span key={tech} className="tech">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project-btn"
+                  >
+                    {translate.projects.viewProject}
+                  </a>
+                )}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

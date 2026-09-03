@@ -27,7 +27,7 @@ export const education: EducationItem[] = [
   },
   {
     course: "MBA em Gestão de Projetos",
-    period: "Conclusão em Out/2025",
+    period: "Concluído em Out/2025",
     subjects: [
       { name: "Tópicos Essenciais em Gestão", hours: 40 },
       { name: "Administração Estratégica", hours: 40 },
@@ -44,7 +44,7 @@ export const education: EducationItem[] = [
   },
   {
     course: "Pós-graduação em Biologia Marinha",
-    period: "Conclusão em Fev/2026",
+    period: "Concluída em Fev/2026",
     subjects: [
       { name: "Desenvolvimento Profissional", hours: 40 },
       { name: "Ecossistemas Marinhos e Costeiros", hours: 40 },

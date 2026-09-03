@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import About from "../components/About";
 import TechStack from "../components/TechStack";
 import Projects from "../components/Projects";
 import Experience from "../components/Experience";
@@ -14,30 +15,34 @@ export default function Home() {
       <Hero />
 
       <Reveal delay={100}>
-        <TechStack />
+        <About />
       </Reveal>
 
       <Reveal delay={150}>
-        <Projects />
+        <TechStack />
       </Reveal>
 
       <Reveal delay={200}>
-        <Experience />
+        <Projects />
       </Reveal>
 
       <Reveal delay={250}>
-        <Education />
+        <Experience />
       </Reveal>
 
       <Reveal delay={300}>
-        <Languages />
+        <Education />
       </Reveal>
 
       <Reveal delay={350}>
+        <Languages />
+      </Reveal>
+
+      <Reveal delay={400}>
         <Certifications />
       </Reveal>
 
-        <Footer />
+      <Footer />
     </>
   );
 }

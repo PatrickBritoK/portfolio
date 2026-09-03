@@ -1,11 +1,14 @@
 import { techstack } from "../data/techstack";
+import { useLanguage } from "../context/useLanguage";
 import "../styles/techstack.css";
 
 export default function TechStack() {
+  const { translate } = useLanguage();
+
   return (
-    <section>
+    <section id="tecnologias">
       <div className="section-container">
-        <h2>Tech Stack</h2>
+        <h2>{translate.techStack.title}</h2>
 
         <div className="stack-grid">
           {techstack.map((t) => {

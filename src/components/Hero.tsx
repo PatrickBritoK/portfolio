@@ -1,11 +1,11 @@
 import "../styles/hero.css";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../context/useLanguage";
 
 export default function Hero() {
   const { translate } = useLanguage();
 
   return (
-    <section className="hero">
+    <section id="inicio" className="hero">
       <div className="hero-content section-container">
         <h1>Patrick Brito</h1>
 

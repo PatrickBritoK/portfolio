@@ -1,16 +1,17 @@
-import { createContext, useContext, useState, type ReactNode } from "react";
+import {
+  useEffect,
+  useState,
+  type ReactNode,
+} from "react";
 import { translations, type Language } from "../i18n";
-
-interface LanguageContextData {
-  lang: Language;
-  setLang: (lang: Language) => void;
-  translate: (typeof translations)["pt"];
-}
-
-const LanguageContext = createContext<LanguageContextData | undefined>(undefined);
+import { LanguageContext } from "./language-context";
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLang] = useState<Language>("pt");
+
+  useEffect(() => {
+    document.documentElement.lang = lang === "pt" ? "pt-BR" : lang;
+  }, [lang]);
 
   return (
     <LanguageContext.Provider
@@ -23,14 +24,4 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       {children}
     </LanguageContext.Provider>
   );
-}
-
-export function useLanguage() {
-  const context = useContext(LanguageContext);
-
-  if (!context) {
-    throw new Error("useLanguage must be used within LanguageProvider");
-  }
-
-  return context;
 }

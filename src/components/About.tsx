@@ -1,14 +1,14 @@
+import { useLanguage } from "../context/useLanguage";
+import "../styles/about.css";
+
 export default function About() {
+  const { translate } = useLanguage();
+
   return (
-    <section>
-      <div className="section-container">
-        <h2>Sobre mim</h2>
-        <p>
-          Sou desenvolvedor full stack com experiência na construção de interfaces,
-          APIs e soluções corporativas. Atuo principalmente com Java, Go, React,
-          Vue e bancos de dados relacionais, buscando sempre unir performance,
-          organização de código e entregas que gerem valor real para o produto.
-        </p>
+    <section id="sobre" className="about">
+      <div className="section-container about-container">
+        <h2>{translate.about.title}</h2>
+        <p>{translate.about.text}</p>
       </div>
     </section>
   );

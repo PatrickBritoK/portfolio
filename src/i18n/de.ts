@@ -1,4 +1,27 @@
 const de = {
+  navigation: {
+    label: "Hauptnavigation",
+    toggleMenu: "Menü öffnen oder schließen",
+    language: "Sprache auswählen",
+    home: "Start",
+    about: "Über mich",
+    technologies: "Technologien",
+    projects: "Projekte",
+    experience: "Berufserfahrung",
+    education: "Ausbildung",
+    certifications: "Zertifikate",
+  },
+
+  about: {
+    title: "Über mich",
+    text:
+      "Ich bin Full-Stack-Entwickler mit Erfahrung in der Entwicklung von Benutzeroberflächen, APIs und Unternehmenslösungen. Mein Schwerpunkt liegt auf Java, Go, React, Vue und relationalen Datenbanken. Dabei verbinde ich Performance, gut strukturierten Code und Ergebnisse, die einen echten Mehrwert für das Produkt schaffen.",
+  },
+
+  techStack: {
+    title: "Technologien",
+  },
+
   hero: {
     subtitle:
       "Full-Stack-Entwickler mit Fokus auf Java, Go, React, Vue und skalierbare Anwendungsarchitekturen.",
@@ -8,11 +31,55 @@ const de = {
     linkedin: "LinkedIn",
   },
 
+  projects: {
+    title: "Ausgewählte Projekte",
+    viewProject: "Projekt ansehen",
+    items: [
+      {
+        name: "Modernisierung eines Pharma-Portals",
+        description:
+          "Migration eines Legacy-Portals auf eine moderne Architektur mit neuen Oberflächen und APIs, Refactorings für Performance und Wartbarkeit sowie kontinuierlicher Produktentwicklung.",
+      },
+      {
+        name: "Unternehmensportal mit mehreren Versionen",
+        description:
+          "Korrektive und evolutionäre Wartung eines Portals mit mehreren Versionen, einschließlich Fehleranalyse, Problemlösung und Umsetzung von Verbesserungen.",
+      },
+      {
+        name: "Online-Kursportal",
+        description:
+          "Entwicklung von Oberflächen und dynamischen Diagrammen für eine Lernplattform unter Anwendung von Clean-Architecture-Prinzipien sowie Unterstützung des Go-Backends.",
+      },
+      {
+        name: "Spincare — Home-Care-Management",
+        description:
+          "Full-Stack-Entwicklung einer Lösung für Home-Care-Abläufe, einschließlich APIs, Benutzeroberflächen sowie Modellierung und Verwaltung der Datenbank.",
+      },
+      {
+        name: "Self-Service-Terminal im Gesundheitswesen",
+        description:
+          "Entwicklung eines Terminals für Krankenhäuser und Labore mit APIs, Benutzeroberflächen, Datenbankdesign und Integration in das Tasy-System.",
+      },
+      {
+        name: "Event-Management-Plattform",
+        description:
+          "Entwicklung einer Web- und Mobile-Plattform für Veranstaltungen, einschließlich APIs, Benutzeroberflächen, Zahlungsintegration und Datenpersistenz.",
+      },
+      {
+        name: "Versorgungsindikatoren",
+        description:
+          "Entwicklung von APIs und Dashboards mit dynamischen Diagrammen zur Visualisierung und Überwachung von Versorgungsindikatoren.",
+      },
+    ],
+  },
+
   experience: {
     title: "Berufserfahrung",
 
     philips: {
+      company: "Bionexo Tasy (ehemals Philips), über Premiersoft",
       role: "Full-Stack-Entwickler (Mid-Level)",
+      period: "12/2025 - Heute",
       description: `
 - Migration und Modernisierung eines Legacy-Portals im pharmazeutischen Bereich
 - Entwicklung von Benutzeroberflächen mit React
@@ -24,7 +91,9 @@ const de = {
     },
 
     lince: {
+      company: "Lince Tech",
       role: "Full-Stack-Entwickler",
+      period: "11/2024 - 11/2025",
       description: `
 - Entwicklung eines Kursportals mit Vue
 - Entwicklung von Benutzeroberflächen und UI-Komponenten
@@ -35,7 +104,9 @@ const de = {
     },
 
     pulsati: {
+      company: "Pulsati",
       role: "Full-Stack-Entwickler",
+      period: "01/2023 - 11/2024",
       description: `
 Projekt Spincare (Home Care)
 - Entwicklung von APIs mit Java
@@ -86,7 +157,7 @@ Tasy-Beratung
       },
       {
         course: "MBA in Projektmanagement",
-        period: "Voraussichtlicher Abschluss im Oktober 2025",
+        period: "Abgeschlossen im Oktober 2025",
         subjects: [
           { name: "Grundlagen des Managements", hours: 40 },
           { name: "Strategisches Management", hours: 40 },
@@ -103,7 +174,7 @@ Tasy-Beratung
       },
       {
         course: "Postgraduiertenstudium in Meeresbiologie",
-        period: "Voraussichtlicher Abschluss im Februar 2026",
+        period: "Abgeschlossen im Februar 2026",
         subjects: [
           { name: "Berufliche Entwicklung", hours: 40 },
           { name: "Marine und Küstenökosysteme", hours: 40 },
@@ -136,6 +207,47 @@ Tasy-Beratung
         ]
       },
     ],
+  },
+
+  certifications: {
+    title: "Zertifikate",
+    viewCredential: "Zertifikat ansehen",
+    items: [
+      {
+        title: "AWS Partner: Accreditation (Technical)",
+        institution: "Amazon Web Services (AWS)",
+        period: "Ausgestellt im Aug. 2026",
+        techs: ["AWS", "Cloud Computing", "Architektur"],
+      },
+      {
+        title: "AWS Technical Essentials",
+        institution: "Amazon Web Services (AWS)",
+        period: "Ausgestellt im Aug. 2026",
+        techs: ["AWS", "Cloud Computing", "AWS-Grundlagen"],
+      },
+      {
+        title: "Hexagonale Architektur / Ports and Adapters",
+        institution: "Udemy",
+        period: "Ausgestellt im Okt. 2024",
+        techs: ["Architektur", "Java", "Systemdesign"],
+      },
+      {
+        title: "Kompletter API-Kurs mit Node.js, Express, MongoDB und SQL",
+        institution: "Udemy",
+        period: "Ausgestellt im Mai 2024",
+        techs: ["Node.js", "Express", "MongoDB", "SQL", "REST API"],
+      },
+      {
+        title: "SAP TO WORK",
+        institution: "AC International Group",
+        period: "Ausgestellt im Juni 2024",
+        techs: ["SAP"],
+      },
+    ],
+  },
+
+  footer: {
+    rights: "Alle Rechte vorbehalten.",
   },
 
   languages: {

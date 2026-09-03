@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLanguage } from "../context/LanguageContext";
+import { useLanguage } from "../context/useLanguage";
 import "../styles/education.css";
 
 export default function Education() {
@@ -15,7 +15,7 @@ export default function Education() {
   };
 
   return (
-    <section>
+    <section id="formacao">
       <div className="section-container">
         <h2>{translate.education.title}</h2>
 
