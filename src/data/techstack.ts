@@ -5,6 +5,7 @@ import {
   SiOpenjdk,
   SiReact,
   SiVuedotjs,
+  SiAngular,
   SiTypescript,
   SiPostgresql,
   SiMysql,
@@ -18,13 +19,15 @@ export interface TechItem {
   name: string;
   icon: IconType;
   color: string;
+  aliases?: string[];
 }
 
 export const techstack: TechItem[] = [
   { name: "Java", icon: SiOpenjdk, color: "#ea2d2e" },
   { name: "Go", icon: SiGo, color: "#00ADD8" },
   { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Vue.js", icon: SiVuedotjs, color: "#41B883" },
+  { name: "Vue", icon: SiVuedotjs, color: "#41B883", aliases: ["Vue"] },
+  { name: "Angular", icon: SiAngular, color: "#DD0031" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#336791" },
   { name: "Oracle", icon: SiOracle, color: "#F80000" },

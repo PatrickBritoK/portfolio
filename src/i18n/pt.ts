@@ -10,17 +10,35 @@ const pt = {
     experience: "Experiência",
     education: "Formação",
     certifications: "Certificações",
+    themeToDark: "Ativar modo escuro",
+    themeToLight: "Ativar modo claro",
+    backToTop: "Voltar ao topo",
   },
 
   about: {
     title: "Sobre mim",
-    text:
-      "Sou desenvolvedor full stack com experiência na construção de interfaces, APIs e soluções corporativas. Atuo principalmente com Java, Go, React, Vue e bancos de dados relacionais, buscando unir performance, organização de código e entregas que gerem valor real para o produto.",
+    text: [
+      "Olá, me chamo Patrick. Sou desenvolvedor Full Stack com experiência prática em Java, React, Vue, Angular e PostgreSQL, atuando no desenvolvimento de sistemas, integrações e aplicações orientadas a negócio.",
+      "Tenho forte interesse em novas tecnologias e mantenho uma rotina constante de aprendizado, buscando sempre evoluir tecnicamente e entregar soluções eficientes, escaláveis e bem estruturadas.",
+      "Concluí um MBA em Gestão de Projetos, o que ampliou minha visão estratégica, organização e capacidade de atuar de forma orientada a resultados.",
+      "Atualmente, também realizo aulas de alemão e inglês.",
+    ],
   },
 
   techStack: {
     title: "Tecnologias",
+    experienceLabel: "Experiência",
+    year: "ano",
+    years: "anos",
+    month: "mês",
+    months: "meses",
+    and: "e",
+    lessThanMonth: "menos de 1 mês",
   },
+
+  techLabels: {
+    "Clean Architecture": "Arquitetura Limpa",
+  } as Record<string, string>,
 
   hero: {
     subtitle:
@@ -48,7 +66,7 @@ const pt = {
       {
         name: "Portal de Cursos",
         description:
-          "Desenvolvimento de interfaces e gráficos dinâmicos para uma plataforma de cursos, aplicando princípios de Clean Architecture e prestando suporte ao back-end em Go.",
+          "Desenvolvimento de interfaces e gráficos dinâmicos para uma plataforma de cursos, aplicando princípios de Arquitetura Limpa e prestando suporte ao back-end em Go.",
       },
       {
         name: "Spincare — Gestão de Home Care",
@@ -75,12 +93,26 @@ const pt = {
 
   experience: {
     title: "Experiência",
+    tabs: {
+      it: "TI",
+      other: "Outras",
+    },
+    emptyOther: "Nenhuma experiência extra cadastrada ainda.",
 
     philips: {
-      company: "Bionexo Tasy (antiga Philips), via Premiersoft",
+      company: "Premiersoft",
       role: "Desenvolvedor Full Stack Pleno",
       period: "12/2025 - Atual",
+      contract:
+        "Alocado como terceiro no cliente Bionexo Tasy (antiga Philips). Atuo no cliente desde a época da Philips e permaneci após a aquisição pela Bionexo Tasy.",
       description: `
+Portal Corporativo Multiversão
+- Correção de bugs e inconsistências entre versões
+- Manutenção e evolução das funcionalidades existentes
+- Investigação e resolução de problemas no sistema
+- Implementação de ajustes e melhorias conforme as necessidades do projeto
+
+Migração de um portal legado do setor farmacêutico
 - Migração e modernização de portal legado do setor farmacêutico
 - Desenvolvimento de interfaces utilizando React
 - Criação e manutenção de APIs em Java
@@ -94,11 +126,12 @@ const pt = {
       company: "Lince Tech",
       role: "Desenvolvedor Full Stack",
       period: "11/2024 - 11/2025",
+      contract: "",
       description: `
 - Desenvolvimento de portal de cursos utilizando Vue
 - Desenvolvimento de interfaces e componentes de usuário
 - Criação de dashboards e gráficos dinâmicos
-- Aplicação de princípios de Clean Architecture
+- Aplicação de princípios de Arquitetura Limpa
 - Suporte no desenvolvimento de funcionalidades back-end em Golang
 `,
     },
@@ -107,6 +140,7 @@ const pt = {
       company: "Pulsati",
       role: "Desenvolvedor Full Stack",
       period: "01/2023 - 11/2024",
+      contract: "",
       description: `
 Projeto Spincare (Home Care)
 - Desenvolvimento de APIs utilizando Java
@@ -132,6 +166,18 @@ Indicadores Assistenciais
 
 Consultoria Tasy
 - Atuação em processo de migração para Tasy HTML5
+`,
+    },
+
+    example: {
+      company: "Exemplo — edite ou remova",
+      role: "Sua função",
+      period: "01/2020 - 12/2020",
+      contract: "",
+      description: `
+- Este é um item de exemplo para experiências fora de TI
+- Você pode editar em src/i18n/*.ts (chave "example")
+- Para remover, apague este item e o correspondente em src/data/experience.ts
 `,
     },
   },

@@ -10,17 +10,35 @@ const en = {
     experience: "Experience",
     education: "Education",
     certifications: "Certifications",
+    themeToDark: "Switch to dark mode",
+    themeToLight: "Switch to light mode",
+    backToTop: "Back to top",
   },
 
   about: {
     title: "About me",
-    text:
-      "I am a full stack developer experienced in building interfaces, APIs, and enterprise solutions. I work primarily with Java, Go, React, Vue, and relational databases, combining performance, well-structured code, and deliveries that create real product value.",
+    text: [
+      "Hi, I'm Patrick. I'm a Full Stack developer with hands-on experience in Java, React, Vue, Angular and PostgreSQL, working on system development, integrations and business-oriented applications.",
+      "I have a strong interest in new technologies and keep a constant learning routine, always looking to grow technically and deliver efficient, scalable and well-structured solutions.",
+      "I completed an MBA in Project Management, which broadened my strategic vision, organizational skills and ability to work with a results-oriented mindset.",
+      "I'm currently also taking German and English classes.",
+    ],
   },
 
   techStack: {
     title: "Technologies",
+    experienceLabel: "Experience",
+    year: "year",
+    years: "years",
+    month: "month",
+    months: "months",
+    and: "and",
+    lessThanMonth: "less than 1 month",
   },
+
+  techLabels: {
+    "Clean Architecture": "Clean Architecture",
+  } as Record<string, string>,
 
   hero: {
     subtitle:
@@ -75,12 +93,26 @@ const en = {
 
   experience: {
     title: "Experience",
+    tabs: {
+      it: "IT",
+      other: "Other",
+    },
+    emptyOther: "No extra experience registered yet.",
 
     philips: {
-      company: "Bionexo Tasy (formerly Philips), via Premiersoft",
+      company: "Premiersoft",
       role: "Mid-Level Full Stack Developer",
       period: "12/2025 - Present",
+      contract:
+        "Working as a contractor at the client Bionexo Tasy (formerly Philips). I have been at the client since the Philips era and continued after the acquisition by Bionexo Tasy.",
       description: `
+Multi-Version Corporate Portal
+- Bug fixing and inconsistency resolution across versions
+- Maintenance and evolution of existing features
+- Investigation and troubleshooting of system issues
+- Implementation of adjustments and improvements according to project needs
+
+Legacy Pharmaceutical Portal Migration
 - Migration and modernization of a legacy pharmaceutical portal
 - Development of interfaces using React
 - Creation and maintenance of Java APIs
@@ -94,6 +126,7 @@ const en = {
       company: "Lince Tech",
       role: "Full Stack Developer",
       period: "11/2024 - 11/2025",
+      contract: "",
       description: `
 - Development of an online courses portal using Vue
 - Development of user interfaces and components
@@ -107,6 +140,7 @@ const en = {
       company: "Pulsati",
       role: "Full Stack Developer",
       period: "01/2023 - 11/2024",
+      contract: "",
       description: `
 Spincare Project (Home Care)
 - Development of APIs using Java
@@ -132,6 +166,18 @@ Healthcare Indicators
 
 Tasy Consulting
 - Participation in the migration process to Tasy HTML5
+`,
+    },
+
+    example: {
+      company: "Example — edit or remove",
+      role: "Your role",
+      period: "01/2020 - 12/2020",
+      contract: "",
+      description: `
+- This is a sample item for non-IT experiences
+- You can edit it in src/i18n/*.ts (key "example")
+- To remove, delete this item and the matching one in src/data/experience.ts
 `,
     },
   },

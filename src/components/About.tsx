@@ -8,7 +8,9 @@ export default function About() {
     <section id="sobre" className="about">
       <div className="section-container about-container">
         <h2>{translate.about.title}</h2>
-        <p>{translate.about.text}</p>
+        {translate.about.text.map((paragraph, index) => (
+          <p key={index}>{paragraph}</p>
+        ))}
       </div>
     </section>
   );

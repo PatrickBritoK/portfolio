@@ -6,14 +6,14 @@
 .subtitle {
   margin-top: 12px;
   font-size: 1.2rem;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 .hero-text {
   margin-top: 16px;
   max-width: 600px;
   margin-inline: auto;
-  color: #cbd5f5;
+  color: var(--hero-text);
 }
 
 .hero-actions {
@@ -25,21 +25,22 @@
 
 .btn {
   padding: 10px 22px;
-  background: #3b82f6;
-  color: white;
+  background: var(--accent-strong);
+  color: #ffffff;
   border-radius: 6px;
   transition: 0.2s;
 }
 
 .btn:hover {
-  background: #2563eb;
+  background: var(--accent-hover);
 }
 
 .btn.secondary {
   background: transparent;
-  border: 1px solid #475569;
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .btn.secondary:hover {
-  background: #1e293b;
+  background: var(--bg-elevated);
 }

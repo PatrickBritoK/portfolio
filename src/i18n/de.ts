@@ -10,17 +10,35 @@ const de = {
     experience: "Berufserfahrung",
     education: "Ausbildung",
     certifications: "Zertifikate",
+    themeToDark: "Dunklen Modus aktivieren",
+    themeToLight: "Hellen Modus aktivieren",
+    backToTop: "Nach oben",
   },
 
   about: {
     title: "Über mich",
-    text:
-      "Ich bin Full-Stack-Entwickler mit Erfahrung in der Entwicklung von Benutzeroberflächen, APIs und Unternehmenslösungen. Mein Schwerpunkt liegt auf Java, Go, React, Vue und relationalen Datenbanken. Dabei verbinde ich Performance, gut strukturierten Code und Ergebnisse, die einen echten Mehrwert für das Produkt schaffen.",
+    text: [
+      "Hallo, ich heiße Patrick. Ich bin Full-Stack-Entwickler mit praktischer Erfahrung in Java, React, Vue, Angular und PostgreSQL und arbeite an der Entwicklung von Systemen, Integrationen und geschäftsorientierten Anwendungen.",
+      "Ich habe ein starkes Interesse an neuen Technologien und pflege eine kontinuierliche Lernroutine mit dem Ziel, mich technisch weiterzuentwickeln und effiziente, skalierbare und gut strukturierte Lösungen zu liefern.",
+      "Ich habe einen MBA in Projektmanagement abgeschlossen, der meinen strategischen Blick, meine Organisation und meine Fähigkeit, ergebnisorientiert zu arbeiten, erweitert hat.",
+      "Derzeit nehme ich außerdem am Deutsch- und Englischunterricht teil.",
+    ],
   },
 
   techStack: {
     title: "Technologien",
+    experienceLabel: "Erfahrung",
+    year: "Jahr",
+    years: "Jahre",
+    month: "Monat",
+    months: "Monate",
+    and: "und",
+    lessThanMonth: "weniger als 1 Monat",
   },
+
+  techLabels: {
+    "Clean Architecture": "Clean Architecture",
+  } as Record<string, string>,
 
   hero: {
     subtitle:
@@ -75,12 +93,26 @@ const de = {
 
   experience: {
     title: "Berufserfahrung",
+    tabs: {
+      it: "IT",
+      other: "Sonstige",
+    },
+    emptyOther: "Noch keine zusätzliche Erfahrung erfasst.",
 
     philips: {
-      company: "Bionexo Tasy (ehemals Philips), über Premiersoft",
+      company: "Premiersoft",
       role: "Full-Stack-Entwickler (Mid-Level)",
       period: "12/2025 - Heute",
+      contract:
+        "Als externer Mitarbeiter beim Kunden Bionexo Tasy (ehemals Philips) eingesetzt. Ich arbeite beim Kunden seit der Philips-Ära und wurde nach der Übernahme durch Bionexo Tasy weiterbeschäftigt.",
       description: `
+Unternehmensportal mit mehreren Versionen
+- Behebung von Bugs und Inkonsistenzen zwischen Versionen
+- Wartung und Weiterentwicklung bestehender Funktionen
+- Untersuchung und Behebung von Systemproblemen
+- Umsetzung von Anpassungen und Verbesserungen gemäß den Projektanforderungen
+
+Migration eines Legacy-Pharma-Portals
 - Migration und Modernisierung eines Legacy-Portals im pharmazeutischen Bereich
 - Entwicklung von Benutzeroberflächen mit React
 - Erstellung und Wartung von APIs in Java
@@ -94,6 +126,7 @@ const de = {
       company: "Lince Tech",
       role: "Full-Stack-Entwickler",
       period: "11/2024 - 11/2025",
+      contract: "",
       description: `
 - Entwicklung eines Kursportals mit Vue
 - Entwicklung von Benutzeroberflächen und UI-Komponenten
@@ -107,6 +140,7 @@ const de = {
       company: "Pulsati",
       role: "Full-Stack-Entwickler",
       period: "01/2023 - 11/2024",
+      contract: "",
       description: `
 Projekt Spincare (Home Care)
 - Entwicklung von APIs mit Java
@@ -132,6 +166,18 @@ Versorgungsindikatoren
 
 Tasy-Beratung
 - Mitarbeit im Migrationsprozess zu Tasy HTML5
+`,
+    },
+
+    example: {
+      company: "Beispiel — bearbeiten oder entfernen",
+      role: "Ihre Rolle",
+      period: "01/2020 - 12/2020",
+      contract: "",
+      description: `
+- Dies ist ein Beispielelement für Erfahrungen außerhalb der IT
+- Bearbeiten Sie es in src/i18n/*.ts (Schlüssel "example")
+- Zum Entfernen löschen Sie dieses Element und das entsprechende in src/data/experience.ts
 `,
     },
   },

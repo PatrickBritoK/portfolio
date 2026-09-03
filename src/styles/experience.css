@@ -10,7 +10,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: #334155;
+  background: var(--border);
 }
 
 .timeline-item {
@@ -19,26 +19,126 @@
 }
 
 .timeline-content {
-  background: #1e293b;
+  background: var(--bg-elevated);
   padding: 22px;
   border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.timeline-heading {
+  flex: 1;
+  min-width: 0;
+}
+
+.company-logos {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.company-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: var(--bg);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 1px 2px var(--shadow);
+  overflow: hidden;
+}
+
+.company-logo-fallback {
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border: none;
+}
+
+@media (max-width: 520px) {
+  .timeline-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .company-logo {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .role {
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-top: 4px;
 }
 
 .period {
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--text-faint);
   margin-top: 4px;
+}
+
+.contract-note {
+  margin-top: 8px;
+  padding: 8px 10px;
+  background: var(--bg);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.experience-tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 32px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+}
+
+.experience-tab {
+  padding: 8px 20px;
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.experience-tab:hover {
+  color: var(--text);
+}
+
+.experience-tab.active {
+  background: var(--accent-strong);
+  color: #ffffff;
+}
+
+.experience-empty {
+  color: var(--text-muted);
+  padding: 24px 0;
 }
 
 .desc {
   margin-top: 14px;
   white-space: pre-line;
-  color: #cbd5e1;
+  color: var(--text-soft);
   line-height: 1.7;
 }
 
@@ -50,7 +150,8 @@
 }
 
 .tech {
-  background: #334155;
+  background: var(--bg-muted);
+  color: var(--text);
   padding: 4px 10px;
   border-radius: 999px;
   font-size: 0.8rem;

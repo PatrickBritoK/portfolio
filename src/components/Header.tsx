@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { FiMoon, FiSun } from "react-icons/fi";
 import "../styles/header.css";
 import { useLanguage } from "../context/useLanguage";
+import { useTheme } from "../context/useTheme";
 import type { Language } from "../i18n";
 
 export default function Header() {
   const { lang, setLang, translate } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigationItems = [
@@ -18,6 +21,10 @@ export default function Header() {
   ];
 
   const closeMenu = () => setIsMenuOpen(false);
+  const themeLabel =
+    theme === "dark"
+      ? translate.navigation.themeToLight
+      : translate.navigation.themeToDark;
 
   return (
     <header className="header">
@@ -54,6 +61,16 @@ export default function Header() {
             ))}
           </ul>
         </nav>
+
+        <button
+          type="button"
+          className="theme-toggle"
+          aria-label={themeLabel}
+          title={themeLabel}
+          onClick={toggleTheme}
+        >
+          {theme === "dark" ? <FiSun /> : <FiMoon />}
+        </button>
 
         <div className="language-select">
           <label className="sr-only" htmlFor="language">

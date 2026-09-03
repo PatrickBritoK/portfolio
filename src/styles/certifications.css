@@ -5,7 +5,7 @@
 }
 
 .certification-card {
-  background: #1e293b;
+  background: var(--bg-elevated);
   padding: 22px;
   border-radius: 10px;
   transition: 0.2s;
@@ -13,25 +13,25 @@
 
 .certification-card:hover {
   transform: translateY(-4px);
-  background: #263449;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: var(--bg-elevated-hover);
+  box-shadow: 0 8px 20px var(--shadow);
 }
 
 .certification-card h3 {
   font-size: 1.05rem;
   font-weight: 600;
-  color: #f8fafc;
+  color: var(--text-strong);
 }
 
 .certification-card .institution {
   margin-top: 6px;
-  color: #94a3b8;
+  color: var(--text-muted);
 }
 
 .certification-card .period {
   margin-top: 8px;
   font-size: 0.9rem;
-  color: #64748b;
+  color: var(--text-faint);
 }
 
 .certification-card .tech-list {
@@ -42,7 +42,8 @@
 }
 
 .certification-card .tech {
-  background: #334155;
+  background: var(--bg-muted);
+  color: var(--text);
   padding: 4px 10px;
   border-radius: 999px;
   font-size: 0.8rem;
@@ -51,7 +52,7 @@
 .certification-link {
   display: inline-block;
   margin-top: 16px;
-  color: #60a5fa;
+  color: var(--accent);
   font-size: 0.95rem;
 }
 

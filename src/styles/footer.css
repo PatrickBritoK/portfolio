@@ -2,8 +2,8 @@
   text-align: center;
   padding: 40px 20px;
   margin-top: 60px;
-  border-top: 1px solid #222;
-  color: #cccccc;
+  border-top: 1px solid var(--footer-border);
+  color: var(--footer-text);
 }
 
 .footer-links {
@@ -15,10 +15,10 @@
 
 .footer-links a {
   text-decoration: none;
-  color: #2563eb;
+  color: var(--accent);
   transition: 0.2s ease;
 }
 
 .footer-links a:hover {
-  color: #1e4fb7;
+  color: var(--accent-hover);
 }

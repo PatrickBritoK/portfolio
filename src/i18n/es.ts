@@ -10,17 +10,35 @@ const es = {
     experience: "Experiencia",
     education: "Formación",
     certifications: "Certificaciones",
+    themeToDark: "Activar modo oscuro",
+    themeToLight: "Activar modo claro",
+    backToTop: "Volver arriba",
   },
 
   about: {
     title: "Sobre mí",
-    text:
-      "Soy desarrollador full stack con experiencia en la creación de interfaces, APIs y soluciones empresariales. Trabajo principalmente con Java, Go, React, Vue y bases de datos relacionales, combinando rendimiento, código bien estructurado y entregas que generan valor real para el producto.",
+    text: [
+      "Hola, me llamo Patrick. Soy desarrollador Full Stack con experiencia práctica en Java, React, Vue, Angular y PostgreSQL, trabajando en el desarrollo de sistemas, integraciones y aplicaciones orientadas al negocio.",
+      "Tengo un fuerte interés por las nuevas tecnologías y mantengo una rutina constante de aprendizaje, buscando siempre evolucionar técnicamente y entregar soluciones eficientes, escalables y bien estructuradas.",
+      "Concluí un MBA en Gestión de Proyectos, lo que amplió mi visión estratégica, organización y capacidad de actuar con una mentalidad orientada a resultados.",
+      "Actualmente también tomo clases de alemán e inglés.",
+    ],
   },
 
   techStack: {
     title: "Tecnologías",
+    experienceLabel: "Experiencia",
+    year: "año",
+    years: "años",
+    month: "mes",
+    months: "meses",
+    and: "y",
+    lessThanMonth: "menos de 1 mes",
   },
+
+  techLabels: {
+    "Clean Architecture": "Arquitectura Limpia",
+  } as Record<string, string>,
 
   hero: {
     subtitle:
@@ -48,7 +66,7 @@ const es = {
       {
         name: "Portal de Cursos",
         description:
-          "Desarrollo de interfaces y gráficos dinámicos para una plataforma de cursos, aplicando principios de Clean Architecture y brindando soporte al backend en Go.",
+          "Desarrollo de interfaces y gráficos dinámicos para una plataforma de cursos, aplicando principios de Arquitectura Limpia y brindando soporte al backend en Go.",
       },
       {
         name: "Spincare — Gestión de Home Care",
@@ -75,12 +93,26 @@ const es = {
 
   experience: {
     title: "Experiencia",
+    tabs: {
+      it: "TI",
+      other: "Otras",
+    },
+    emptyOther: "Ninguna experiencia extra registrada aún.",
 
     philips: {
-      company: "Bionexo Tasy (anteriormente Philips), vía Premiersoft",
+      company: "Premiersoft",
       role: "Desarrollador Full Stack Semi Senior",
       period: "12/2025 - Actualidad",
+      contract:
+        "Actuando como tercerizado en el cliente Bionexo Tasy (anteriormente Philips). Trabajo en el cliente desde la época de Philips y me mantuve tras la adquisición por Bionexo Tasy.",
       description: `
+Portal Corporativo Multiversión
+- Corrección de bugs e inconsistencias entre versiones
+- Mantenimiento y evolución de las funcionalidades existentes
+- Investigación y resolución de problemas en el sistema
+- Implementación de ajustes y mejoras según las necesidades del proyecto
+
+Migración de un portal legado del sector farmacéutico
 - Migración y modernización de portal legado del sector farmacéutico
 - Desarrollo de interfaces utilizando React
 - Creación y mantenimiento de APIs en Java
@@ -94,11 +126,12 @@ const es = {
       company: "Lince Tech",
       role: "Desarrollador Full Stack",
       period: "11/2024 - 11/2025",
+      contract: "",
       description: `
 - Desarrollo de portal de cursos utilizando Vue
 - Desarrollo de interfaces y componentes de usuario
 - Creación de dashboards y gráficos dinámicos
-- Aplicación de principios de Clean Architecture
+- Aplicación de principios de Arquitectura Limpia
 - Apoyo en el desarrollo de funcionalidades backend en Golang
 `,
     },
@@ -107,6 +140,7 @@ const es = {
       company: "Pulsati",
       role: "Desarrollador Full Stack",
       period: "01/2023 - 11/2024",
+      contract: "",
       description: `
 Proyecto Spincare (Home Care)
 - Desarrollo de APIs utilizando Java
@@ -132,6 +166,18 @@ Indicadores Asistenciales
 
 Consultoría Tasy
 - Participación en proceso de migración a Tasy HTML5
+`,
+    },
+
+    example: {
+      company: "Ejemplo — edita o elimina",
+      role: "Tu función",
+      period: "01/2020 - 12/2020",
+      contract: "",
+      description: `
+- Este es un elemento de ejemplo para experiencias fuera de TI
+- Puedes editarlo en src/i18n/*.ts (clave "example")
+- Para eliminarlo, borra este elemento y el correspondiente en src/data/experience.ts
 `,
     },
   },

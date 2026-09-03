@@ -3,7 +3,11 @@
 }
 
 .about-container p {
-  color: #cbd5e1;
+  color: var(--text-soft);
   font-size: 1.05rem;
   line-height: 1.9;
+}
+
+.about-container p + p {
+  margin-top: 16px;
 }

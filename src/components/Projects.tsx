@@ -23,7 +23,7 @@ export default function Projects() {
                 <div className="tech-list">
                   {project.techs.map((tech) => (
                     <span key={tech} className="tech">
-                      {tech}
+                      {translate.techLabels[tech] ?? tech}
                     </span>
                   ))}
                 </div>

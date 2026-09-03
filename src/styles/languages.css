@@ -5,7 +5,7 @@
 }
 
 .language-card {
-  background: #1e293b;
+  background: var(--bg-elevated);
   padding: 22px;
   border-radius: 10px;
   transition: 0.2s;
@@ -13,8 +13,8 @@
 
 .language-card:hover {
   transform: translateY(-4px);
-  background: #263449;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  background: var(--bg-elevated-hover);
+  box-shadow: 0 8px 20px var(--shadow);
 }
 
 .language-card h3 {
@@ -24,5 +24,5 @@
 
 .language-card p {
   margin-top: 8px;
-  color: #94a3b8;
+  color: var(--text-muted);
 }

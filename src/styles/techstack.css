@@ -7,7 +7,7 @@
 }
 
 .stack-item {
-  background: #1e293b;
+  background: var(--bg-elevated);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -19,11 +19,12 @@
   align-items: center;
   justify-content: center;
   border: 2px solid transparent;
+  position: relative;
 }
 
 .stack-item:hover {
   transform: translateY(-4px);
-  background: #263449;
+  background: var(--bg-elevated-hover);
   border-color: var(--tech-color);
 }
 
@@ -35,4 +36,40 @@
 
 .stack-item:hover .stack-icon {
   transform: scale(1.2);
+}
+
+.stack-tooltip {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--bg);
+  color: var(--text-strong);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  border: 1px solid var(--tech-color);
+  box-shadow: 0 4px 12px var(--shadow);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.stack-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--tech-color);
+}
+
+.stack-item:hover .stack-tooltip,
+.stack-item:focus-within .stack-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
