@@ -27,6 +27,8 @@ const en = {
 
   techStack: {
     title: "Technologies",
+    professionalLabel: "Professional use",
+    learningLabel: "Studying / familiar with",
     experienceLabel: "Experience",
     year: "year",
     years: "years",
@@ -39,6 +41,14 @@ const en = {
   techLabels: {
     "Clean Architecture": "Clean Architecture",
   } as Record<string, string>,
+
+  highlights: {
+    yearsExperience: "years of experience",
+    projects: "delivered projects",
+    education: "degrees",
+    languages: "languages",
+    inProgress: "in progress",
+  },
 
   hero: {
     subtitle:
@@ -69,7 +79,7 @@ const en = {
           "Development of interfaces and dynamic charts for an online learning platform, applying Clean Architecture principles and supporting its Go backend.",
       },
       {
-        name: "Spincare — Home Care Management",
+        name: "Spincare - Home Care Management",
         description:
           "Full stack development of a Home Care operations solution, covering APIs, user interfaces, and database modeling and management.",
       },
@@ -142,7 +152,7 @@ Legacy Pharmaceutical Portal Migration
       period: "01/2023 - 11/2024",
       contract: "",
       description: `
-Spincare Project (Home Care)
+Spincare - Project (Home Care)
 - Development of APIs using Java
 - User interface development with Angular
 - Implementation and management of PostgreSQL databases
@@ -235,6 +245,7 @@ Tasy Consulting
       {
         course: "Bachelor's Degree in Biological Sciences",
         period: "Expected completion in 2028",
+        inProgress: true,
         subjects: [
           { name: "Digital Orientation", hours: 20 },
           { name: "Human Anatomy", hours: 40 },
@@ -301,8 +312,8 @@ Tasy Consulting
     items: [
       { name: "Portuguese", level: "Fluent / Native" },
       { name: "Spanish", level: "Intermediate" },
-      { name: "English", level: "Basic / Intermediate (in progress)" },
-      { name: "German", level: "Beginner (in progress)" },
+      { name: "English", level: "Basic / Intermediate (in progress)", inProgress: true },
+      { name: "German", level: "Beginner (in progress)", inProgress: true },
     ],
   },
 };

@@ -27,6 +27,8 @@ const de = {
 
   techStack: {
     title: "Technologien",
+    professionalLabel: "Beruflicher Einsatz",
+    learningLabel: "Lernen / Vertrautheit",
     experienceLabel: "Erfahrung",
     year: "Jahr",
     years: "Jahre",
@@ -39,6 +41,14 @@ const de = {
   techLabels: {
     "Clean Architecture": "Clean Architecture",
   } as Record<string, string>,
+
+  highlights: {
+    yearsExperience: "Jahre Erfahrung",
+    projects: "abgeschlossene Projekte",
+    education: "Ausbildungen",
+    languages: "Sprachen",
+    inProgress: "in Bearbeitung",
+  },
 
   hero: {
     subtitle:
@@ -69,7 +79,7 @@ const de = {
           "Entwicklung von Oberflächen und dynamischen Diagrammen für eine Lernplattform unter Anwendung von Clean-Architecture-Prinzipien sowie Unterstützung des Go-Backends.",
       },
       {
-        name: "Spincare — Home-Care-Management",
+        name: "Spincare - Home-Care-Management",
         description:
           "Full-Stack-Entwicklung einer Lösung für Home-Care-Abläufe, einschließlich APIs, Benutzeroberflächen sowie Modellierung und Verwaltung der Datenbank.",
       },
@@ -142,7 +152,7 @@ Migration eines Legacy-Pharma-Portals
       period: "01/2023 - 11/2024",
       contract: "",
       description: `
-Projekt Spincare (Home Care)
+Projekt Spincare - (Home Care)
 - Entwicklung von APIs mit Java
 - Entwicklung der Benutzeroberfläche mit Angular
 - Implementierung und Verwaltung der PostgreSQL-Datenbank
@@ -235,6 +245,7 @@ Tasy-Beratung
       {
         course: "Bachelorstudium in Biologischen Wissenschaften",
         period: "Voraussichtlicher Abschluss im Jahr 2028",
+        inProgress: true,
         subjects: [
           { name: "Digitale Einführung", hours: 20 },
           { name: "Menschliche Anatomie", hours: 40 },
@@ -301,8 +312,8 @@ Tasy-Beratung
     items: [
       { name: "Portugiesisch", level: "Fließend / Muttersprache" },
       { name: "Spanisch", level: "Mittelstufe" },
-      { name: "Englisch", level: "Grundkenntnisse / Mittelstufe (in Ausbildung)" },
-      { name: "Deutsch", level: "Anfänger (in Ausbildung)" },
+      { name: "Englisch", level: "Grundkenntnisse / Mittelstufe (in Ausbildung)", inProgress: true },
+      { name: "Deutsch", level: "Anfänger (in Ausbildung)", inProgress: true },
     ],
   },
 };

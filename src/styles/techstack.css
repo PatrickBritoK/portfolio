@@ -6,6 +6,24 @@
   margin: 0 auto;
 }
 
+.stack-group {
+  margin-bottom: 40px;
+}
+
+.stack-group:last-child {
+  margin-bottom: 0;
+}
+
+.stack-group-title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
 .stack-item {
   background: var(--bg-elevated);
   padding: 20px;

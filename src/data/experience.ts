@@ -76,6 +76,7 @@ export const experiences: ExperienceItem[] = [
       "Tasy",
       "REST API",
       "Git",
+      "Linux",
     ],
     logos: [
       {

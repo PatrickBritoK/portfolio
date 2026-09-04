@@ -27,6 +27,8 @@ const es = {
 
   techStack: {
     title: "Tecnologías",
+    professionalLabel: "Uso profesional",
+    learningLabel: "Estudio / familiaridad",
     experienceLabel: "Experiencia",
     year: "año",
     years: "años",
@@ -39,6 +41,14 @@ const es = {
   techLabels: {
     "Clean Architecture": "Arquitectura Limpia",
   } as Record<string, string>,
+
+  highlights: {
+    yearsExperience: "años de experiencia",
+    projects: "proyectos entregados",
+    education: "formaciones",
+    languages: "idiomas",
+    inProgress: "en progreso",
+  },
 
   hero: {
     subtitle:
@@ -69,7 +79,7 @@ const es = {
           "Desarrollo de interfaces y gráficos dinámicos para una plataforma de cursos, aplicando principios de Arquitectura Limpia y brindando soporte al backend en Go.",
       },
       {
-        name: "Spincare — Gestión de Home Care",
+        name: "Spincare - Gestión de Home Care",
         description:
           "Desarrollo full stack de una solución para operaciones de Home Care, incluyendo APIs, interfaces de usuario y modelado y gestión de la base de datos.",
       },
@@ -142,7 +152,7 @@ Migración de un portal legado del sector farmacéutico
       period: "01/2023 - 11/2024",
       contract: "",
       description: `
-Proyecto Spincare (Home Care)
+Proyecto Spincare - (Home Care)
 - Desarrollo de APIs utilizando Java
 - Desarrollo de la interfaz de usuario en Angular
 - Implementación y gestión de base de datos PostgreSQL
@@ -235,6 +245,7 @@ Consultoría Tasy
       {
         course: "Licenciatura en Ciencias Biológicas",
         period: "Previsión de finalización en 2028",
+        inProgress: true,
         subjects: [
           { name: "Ambientación Digital", hours: 20 },
           { name: "Anatomía Humana", hours: 40 },
@@ -301,8 +312,8 @@ Consultoría Tasy
     items: [
       { name: "Portugués", level: "Fluido / Nativo" },
       { name: "Español", level: "Intermedio" },
-      { name: "Inglés", level: "Básico / Intermedio (en progreso)" },
-      { name: "Alemán", level: "Principiante (en progreso)" },
+      { name: "Inglés", level: "Básico / Intermedio (en progreso)", inProgress: true },
+      { name: "Alemán", level: "Principiante (en progreso)", inProgress: true },
     ],
   },
 };

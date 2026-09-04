@@ -1,0 +1,58 @@
+.highlights {
+  padding: 40px 20px 0;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.highlight-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 24px 16px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlight-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px var(--shadow);
+}
+
+.highlight-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.highlight-label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-transform: lowercase;
+}
+
+.highlight-note {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+@media (max-width: 720px) {
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .highlight-value {
+    font-size: 1.9rem;
+  }
+}

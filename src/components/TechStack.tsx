@@ -1,4 +1,4 @@
-import { techstack } from "../data/techstack";
+import { techstack, type TechItem } from "../data/techstack";
 import { experiences } from "../data/experience";
 import { useLanguage } from "../context/useLanguage";
 import "../styles/techstack.css";
@@ -40,32 +40,55 @@ export default function TechStack() {
     return yearsPart || monthsPart;
   };
 
+  const professional = techstack.filter((tech) => tech.category === "professional");
+  const learning = techstack.filter((tech) => tech.category === "learning");
+
+  const renderGrid = (items: TechItem[], showTooltip: boolean) => (
+    <div className="stack-grid">
+      {items.map((tech) => {
+        const Icon = tech.icon;
+        const months = showTooltip
+          ? getMonthsForTech(tech.name, tech.aliases)
+          : 0;
+        const tooltip =
+          showTooltip && months > 0
+            ? `${t.experienceLabel}: ${formatDuration(months)}`
+            : null;
+
+        return (
+          <div
+            key={tech.name}
+            className="stack-item"
+            style={{ "--tech-color": tech.color } as React.CSSProperties}
+            aria-label={tooltip ?? undefined}
+          >
+            <Icon className="stack-icon" style={{ color: tech.color }} />
+            <p>{tech.name}</p>
+            {tooltip && <span className="stack-tooltip">{tooltip}</span>}
+          </div>
+        );
+      })}
+    </div>
+  );
+
   return (
     <section id="tecnologias">
       <div className="section-container">
         <h2>{t.title}</h2>
 
-        <div className="stack-grid">
-          {techstack.map((tech) => {
-            const Icon = tech.icon;
-            const months = getMonthsForTech(tech.name, tech.aliases);
-            const tooltip =
-              months > 0 ? `${t.experienceLabel}: ${formatDuration(months)}` : null;
+        {professional.length > 0 && (
+          <div className="stack-group">
+            <h3 className="stack-group-title">{t.professionalLabel}</h3>
+            {renderGrid(professional, true)}
+          </div>
+        )}
 
-            return (
-              <div
-                key={tech.name}
-                className="stack-item"
-                style={{ "--tech-color": tech.color } as React.CSSProperties}
-                aria-label={tooltip ?? undefined}
-              >
-                <Icon className="stack-icon" style={{ color: tech.color }} />
-                <p>{tech.name}</p>
-                {tooltip && <span className="stack-tooltip">{tooltip}</span>}
-              </div>
-            );
-          })}
-        </div>
+        {learning.length > 0 && (
+          <div className="stack-group">
+            <h3 className="stack-group-title">{t.learningLabel}</h3>
+            {renderGrid(learning, false)}
+          </div>
+        )}
       </div>
     </section>
   );

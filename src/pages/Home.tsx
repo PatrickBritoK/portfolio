@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import Highlights from "../components/Highlights";
 import About from "../components/About";
 import TechStack from "../components/TechStack";
 import Projects from "../components/Projects";
@@ -13,6 +14,10 @@ export default function Home() {
   return (
     <>
       <Hero />
+
+      <Reveal delay={50}>
+        <Highlights />
+      </Reveal>
 
       <Reveal delay={100}>
         <About />
