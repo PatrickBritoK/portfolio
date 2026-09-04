@@ -24,7 +24,8 @@
 
 .highlight-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px var(--shadow);
+  box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 25%, transparent);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border-soft));
 }
 
 .highlight-value {

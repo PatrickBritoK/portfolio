@@ -19,7 +19,7 @@
 .education-card:hover {
   transform: translateY(-4px);
   background: var(--bg-elevated-hover);
-  box-shadow: 0 8px 20px var(--shadow);
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
 .education-card h3 {

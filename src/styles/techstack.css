@@ -44,6 +44,7 @@
   transform: translateY(-4px);
   background: var(--bg-elevated-hover);
   border-color: var(--tech-color);
+  box-shadow: 0 8px 28px color-mix(in srgb, var(--tech-color) 35%, transparent);
 }
 
 .stack-icon {

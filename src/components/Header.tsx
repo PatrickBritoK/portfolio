@@ -3,10 +3,10 @@ import { FiMoon, FiSun } from "react-icons/fi";
 import "../styles/header.css";
 import { useLanguage } from "../context/useLanguage";
 import { useTheme } from "../context/useTheme";
-import type { Language } from "../i18n";
+import LanguageSelect from "./LanguageSelect";
 
 export default function Header() {
-  const { lang, setLang, translate } = useLanguage();
+  const { translate } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -72,24 +72,7 @@ export default function Header() {
           {theme === "dark" ? <FiSun /> : <FiMoon />}
         </button>
 
-        <div className="language-select">
-          <label className="sr-only" htmlFor="language">
-            {translate.navigation.language}
-          </label>
-          <select
-            id="language"
-            value={lang}
-            onChange={(event) => {
-              setLang(event.target.value as Language);
-              closeMenu();
-            }}
-          >
-            <option value="pt">Português</option>
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="de">Deutsch</option>
-          </select>
-        </div>
+        <LanguageSelect />
       </div>
     </header>
   );
