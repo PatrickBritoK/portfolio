@@ -15,13 +15,13 @@ export default function Header() {
   const isHome = location.pathname === "/";
 
   const navigationItems = [
-    { href: "#inicio", label: translate.navigation.home },
-    { href: "#sobre", label: translate.navigation.about },
-    { href: "#tecnologias", label: translate.navigation.technologies },
-    { href: "#projetos", label: translate.navigation.projects },
-    { href: "#experiencia", label: translate.navigation.experience },
-    { href: "#formacao", label: translate.navigation.education },
-    { href: "#certificacoes", label: translate.navigation.certifications },
+    { href: "#inicio", label: translate.navigation.home, className: "nav-home" },
+    { href: "#sobre", label: translate.navigation.about, className: "" },
+    { href: "#tecnologias", label: translate.navigation.technologies, className: "" },
+    { href: "#projetos", label: translate.navigation.projects, className: "" },
+    { href: "#experiencia", label: translate.navigation.experience, className: "" },
+    { href: "#formacao", label: translate.navigation.education, className: "" },
+    { href: "#certificacoes", label: translate.navigation.certifications, className: "" },
   ];
 
   const closeMenu = () => setIsMenuOpen(false);
@@ -59,7 +59,7 @@ export default function Header() {
             >
               <ul>
                 {navigationItems.map((item) => (
-                  <li key={item.href}>
+                  <li key={item.href} className={item.className}>
                     <Link to={`/${item.href}`} onClick={closeMenu}>
                       {item.label}
                     </Link>

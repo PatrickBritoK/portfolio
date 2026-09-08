@@ -332,6 +332,34 @@ Consultoría Tasy
     back: "Volver al inicio",
   },
 
+  accessibility: {
+    open: "Accesibilidad",
+    title: "Opciones de accesibilidad",
+    skipToContent: "Saltar al contenido",
+    fontSizeLabel: "Tamaño de la fuente",
+    fontSizes: {
+      small: "Pequeña",
+      normal: "Estándar",
+      large: "Grande",
+      xlarge: "Muy grande",
+    },
+    highContrast: "Alto contraste",
+    reduceMotion: "Reducir animaciones",
+    textSpacing: "Aumentar espaciado",
+    underlineLinks: "Subrayar enlaces",
+    colorFilterLabel: "Asistencia de color",
+    colorFilterHint:
+      "Filtros que ayudan a personas con distintos tipos de daltonismo.",
+    colorFilters: {
+      none: "Ninguno",
+      protanopia: "Protanopia",
+      deuteranopia: "Deuteranopia",
+      tritanopia: "Tritanopia",
+      achromatopsia: "Sin color",
+    },
+    reset: "Restaurar valores",
+  },
+
   languages: {
     title: "Idiomas",
     items: [

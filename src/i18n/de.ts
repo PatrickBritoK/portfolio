@@ -332,6 +332,34 @@ Tasy-Beratung
     back: "Zurück zur Startseite",
   },
 
+  accessibility: {
+    open: "Barrierefreiheit",
+    title: "Barrierefreiheits-Optionen",
+    skipToContent: "Zum Inhalt springen",
+    fontSizeLabel: "Schriftgröße",
+    fontSizes: {
+      small: "Klein",
+      normal: "Standard",
+      large: "Groß",
+      xlarge: "Sehr groß",
+    },
+    highContrast: "Hoher Kontrast",
+    reduceMotion: "Animationen reduzieren",
+    textSpacing: "Abstände erhöhen",
+    underlineLinks: "Links unterstreichen",
+    colorFilterLabel: "Farbunterstützung",
+    colorFilterHint:
+      "Filter, die Menschen mit unterschiedlichen Formen von Farbfehlsichtigkeit helfen.",
+    colorFilters: {
+      none: "Keiner",
+      protanopia: "Protanopie",
+      deuteranopia: "Deuteranopie",
+      tritanopia: "Tritanopie",
+      achromatopsia: "Ohne Farbe",
+    },
+    reset: "Standard wiederherstellen",
+  },
+
   languages: {
     title: "Sprachen",
     items: [

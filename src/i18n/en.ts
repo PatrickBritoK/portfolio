@@ -332,6 +332,34 @@ Tasy Consulting
     back: "Back to home",
   },
 
+  accessibility: {
+    open: "Accessibility",
+    title: "Accessibility options",
+    skipToContent: "Skip to content",
+    fontSizeLabel: "Font size",
+    fontSizes: {
+      small: "Small",
+      normal: "Default",
+      large: "Large",
+      xlarge: "Extra large",
+    },
+    highContrast: "High contrast",
+    reduceMotion: "Reduce motion",
+    textSpacing: "Increase spacing",
+    underlineLinks: "Underline links",
+    colorFilterLabel: "Color assistance",
+    colorFilterHint:
+      "Filters that support people with different types of color blindness.",
+    colorFilters: {
+      none: "None",
+      protanopia: "Protanopia",
+      deuteranopia: "Deuteranopia",
+      tritanopia: "Tritanopia",
+      achromatopsia: "Grayscale",
+    },
+    reset: "Restore defaults",
+  },
+
   languages: {
     title: "Languages",
     items: [
