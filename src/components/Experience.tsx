@@ -75,7 +75,11 @@ export default function Experience() {
               const content = translate.experience[exp.translationKey];
 
               return (
-                <div key={index} className="timeline-item">
+                <div
+                  key={index}
+                  id={`experience-${exp.translationKey}`}
+                  className="timeline-item"
+                >
                   <div className="timeline-content">
                     <div className="timeline-header">
                       <div className="timeline-heading">

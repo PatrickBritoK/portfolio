@@ -214,8 +214,14 @@
     gap: 12px;
   }
 
+  .header-logo {
+    margin-right: auto;
+  }
+
   .menu-toggle {
     display: block;
+    order: 10;
+    margin-left: 0;
   }
 
   .navigation {

@@ -1,6 +1,7 @@
 import { techstack, type TechItem } from "../data/techstack";
 import { experiences } from "../data/experience";
 import { useLanguage } from "../context/useLanguage";
+import { slug } from "../utils/slug";
 import "../styles/techstack.css";
 
 function parseYearMonth(value: string): number {
@@ -58,6 +59,7 @@ export default function TechStack() {
         return (
           <div
             key={tech.name}
+            id={`tech-${slug(tech.name)}`}
             className="stack-item"
             style={{ "--tech-color": tech.color } as React.CSSProperties}
             aria-label={tooltip ?? undefined}

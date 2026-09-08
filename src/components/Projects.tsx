@@ -15,7 +15,11 @@ export default function Projects() {
             const content = translate.projects.items[index];
 
             return (
-              <article key={project.id} className="project-card">
+              <article
+                key={project.id}
+                id={`project-${project.id}`}
+                className="project-card"
+              >
                 <h3>{content.name}</h3>
 
                 <p className="description">{content.description}</p>

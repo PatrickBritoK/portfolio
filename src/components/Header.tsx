@@ -4,6 +4,7 @@ import "../styles/header.css";
 import { useLanguage } from "../context/useLanguage";
 import { useTheme } from "../context/useTheme";
 import LanguageSelect from "./LanguageSelect";
+import SearchButton from "./SearchButton";
 
 export default function Header() {
   const { translate } = useLanguage();
@@ -71,6 +72,8 @@ export default function Header() {
         >
           {theme === "dark" ? <FiSun /> : <FiMoon />}
         </button>
+
+        <SearchButton />
 
         <LanguageSelect />
       </div>

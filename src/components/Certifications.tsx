@@ -15,7 +15,11 @@ export default function Certifications() {
             const content = translate.certifications.items[index];
 
             return (
-              <article key={certification.id} className="certification-card">
+              <article
+                key={certification.id}
+                id={`certification-${index}`}
+                className="certification-card"
+              >
                 <h3>{content.title}</h3>
                 <p className="institution">{content.institution}</p>
                 <p className="period">{content.period}</p>

@@ -38,6 +38,22 @@ const de = {
     lessThanMonth: "weniger als 1 Monat",
   },
 
+  search: {
+    open: "Suchen",
+    title: "Suche",
+    placeholder: "Nach Technologie, Projekt, Firma suchen...",
+    hint: "Tippe, um im gesamten Portfolio zu suchen",
+    empty: "Keine Ergebnisse gefunden",
+    categories: {
+      technology: "Technologien",
+      experience: "Berufserfahrung",
+      project: "Projekte",
+      certification: "Zertifikate",
+      education: "Ausbildung",
+      language: "Sprachen",
+    },
+  },
+
   techLabels: {
     "Clean Architecture": "Clean Architecture",
   } as Record<string, string>,
@@ -48,6 +64,8 @@ const de = {
     education: "Ausbildungen",
     languages: "Sprachen",
     inProgress: "in Bearbeitung",
+    yearShort: "J",
+    monthShort: "M",
   },
 
   hero: {

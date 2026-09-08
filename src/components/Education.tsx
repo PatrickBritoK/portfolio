@@ -24,7 +24,11 @@ export default function Education() {
             const isOpen = openItems.includes(index);
 
             return (
-              <div key={index} className="education-card">
+              <div
+                key={index}
+                id={`education-${index}`}
+                className="education-card"
+              >
                 <h3>{item.course}</h3>
 
                 {/* {item.institution && (

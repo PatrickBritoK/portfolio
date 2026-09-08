@@ -27,7 +27,7 @@ export default function Languages() {
   const languages = translate.languages.items;
 
   return (
-    <section>
+    <section id="idiomas">
       <div className="section-container">
         <h2>{translate.languages.title}</h2>
 
@@ -38,6 +38,7 @@ export default function Languages() {
             return (
               <div
                 key={index}
+                id={`language-${index}`}
                 className="language-card"
                 style={
                   {
