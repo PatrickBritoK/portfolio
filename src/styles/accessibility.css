@@ -1,16 +1,16 @@
 .a11y-wrapper {
   position: fixed;
   bottom: 24px;
-  left: 24px;
-  z-index: 90;
+  right: 24px;
+  z-index: 95;
 }
 
 .a11y-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 44px;
+  height: 44px;
   background: var(--accent-strong);
   color: #ffffff;
   border: none;
@@ -35,7 +35,8 @@
 .a11y-panel {
   position: absolute;
   bottom: calc(100% + 10px);
-  left: 0;
+  right: 0;
+  left: auto;
   width: 320px;
   max-width: calc(100vw - 48px);
   max-height: calc(100dvh - 120px);
@@ -54,7 +55,7 @@
 @media (max-width: 480px) {
   .a11y-wrapper {
     bottom: 18px;
-    left: 18px;
+    right: 18px;
   }
 
   .a11y-panel {
