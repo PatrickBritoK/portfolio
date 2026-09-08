@@ -325,6 +325,13 @@ Consultoria Tasy
     rights: "Todos os direitos reservados.",
   },
 
+  notFound: {
+    title: "Página não encontrada",
+    text:
+      "O link não existe ou pode ter sido movido. Volte para o início e continue explorando.",
+    back: "Voltar ao início",
+  },
+
   languages: {
     title: "Idiomas",
     items: [

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FiMoon, FiSun } from "react-icons/fi";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/header.css";
 import { useLanguage } from "../context/useLanguage";
 import { useTheme } from "../context/useTheme";
@@ -10,6 +11,8 @@ export default function Header() {
   const { translate } = useLanguage();
   const { theme, toggleTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const navigationItems = [
     { href: "#inicio", label: translate.navigation.home },
@@ -28,40 +31,44 @@ export default function Header() {
       : translate.navigation.themeToDark;
 
   return (
-    <header className="header">
+    <header className={`header ${isHome ? "" : "header-minimal"}`.trim()}>
       <div className="header-container">
-        <a className="header-logo" href="#inicio" onClick={closeMenu}>
+        <Link className="header-logo" to="/" onClick={closeMenu}>
           Patrick Brito
-        </a>
+        </Link>
 
-        <button
-          type="button"
-          className="menu-toggle"
-          aria-expanded={isMenuOpen}
-          aria-controls="primary-navigation"
-          aria-label={translate.navigation.toggleMenu}
-          onClick={() => setIsMenuOpen((current) => !current)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        {isHome && (
+          <>
+            <button
+              type="button"
+              className="menu-toggle"
+              aria-expanded={isMenuOpen}
+              aria-controls="primary-navigation"
+              aria-label={translate.navigation.toggleMenu}
+              onClick={() => setIsMenuOpen((current) => !current)}
+            >
+              <span />
+              <span />
+              <span />
+            </button>
 
-        <nav
-          id="primary-navigation"
-          className={`navigation ${isMenuOpen ? "open" : ""}`}
-          aria-label={translate.navigation.label}
-        >
-          <ul>
-            {navigationItems.map((item) => (
-              <li key={item.href}>
-                <a href={item.href} onClick={closeMenu}>
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
+            <nav
+              id="primary-navigation"
+              className={`navigation ${isMenuOpen ? "open" : ""}`}
+              aria-label={translate.navigation.label}
+            >
+              <ul>
+                {navigationItems.map((item) => (
+                  <li key={item.href}>
+                    <Link to={`/${item.href}`} onClick={closeMenu}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </>
+        )}
 
         <button
           type="button"
@@ -73,7 +80,7 @@ export default function Header() {
           {theme === "dark" ? <FiSun /> : <FiMoon />}
         </button>
 
-        <SearchButton />
+        {isHome && <SearchButton />}
 
         <LanguageSelect />
       </div>

@@ -325,6 +325,13 @@ Tasy Consulting
     rights: "All rights reserved.",
   },
 
+  notFound: {
+    title: "Page not found",
+    text:
+      "The link doesn't exist or may have been moved. Go back to the start and keep exploring.",
+    back: "Back to home",
+  },
+
   languages: {
     title: "Languages",
     items: [

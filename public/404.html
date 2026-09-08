@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Patrick Brito</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --bg-elevated: #1e293b;
+        --text: #e5e7eb;
+        --text-muted: #94a3b8;
+        --accent: #60a5fa;
+        --accent-hover: #2563eb;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #e9eef5;
+          --bg-elevated: #ffffff;
+          --text: #1e293b;
+          --text-muted: #475569;
+          --accent: #2563eb;
+          --accent-hover: #1d4ed8;
+        }
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        font-family: Inter, system-ui, -apple-system, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 520px;
+        text-align: center;
+      }
+
+      .code {
+        font-size: clamp(4rem, 12vw, 7rem);
+        font-weight: 700;
+        color: var(--accent);
+        line-height: 1;
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        margin-top: 12px;
+        font-size: 1.6rem;
+        font-weight: 600;
+      }
+
+      p {
+        margin-top: 12px;
+        color: var(--text-muted);
+      }
+
+      a.btn {
+        display: inline-block;
+        margin-top: 28px;
+        padding: 10px 22px;
+        background: var(--accent);
+        color: #ffffff;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background-color 0.2s ease;
+      }
+
+      a.btn:hover,
+      a.btn:focus-visible {
+        background: var(--accent-hover);
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="code">404</p>
+      <h1>Página não encontrada</h1>
+      <p>
+        O link não existe ou pode ter sido movido. Volte para o início e continue
+        explorando.
+      </p>
+      <a class="btn" href="/">Voltar ao início</a>
+    </main>
+  </body>
+</html>

@@ -325,6 +325,13 @@ Tasy-Beratung
     rights: "Alle Rechte vorbehalten.",
   },
 
+  notFound: {
+    title: "Seite nicht gefunden",
+    text:
+      "Der Link existiert nicht oder wurde verschoben. Kehre zur Startseite zurück und erkunde weiter.",
+    back: "Zurück zur Startseite",
+  },
+
   languages: {
     title: "Sprachen",
     items: [

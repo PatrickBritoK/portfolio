@@ -32,6 +32,10 @@
   color: var(--accent);
 }
 
+.header-minimal .header-logo {
+  margin-right: auto;
+}
+
 .navigation {
   margin-left: auto;
 }
